@@ -1,46 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.theleafapps.pro.MainActivity">
+    android:orientation="vertical">
 
-    <TextView
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        xmlns:android="http://schemas.android.com/apk/res/android" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            tools:context="com.theleafapps.pro.MainActivity">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/team_A"
+                android:layout_gravity="center_horizontal"
+                android:padding="8dp"
+                android:text="@string/team_a_text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/team_a_score"
+                android:padding="8dp"
+                android:textSize="80sp"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/zero" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="@string/_3_points"
+                android:onClick="addThreeForTeamA"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="@string/_2_points"
+                android:onClick="addTwoForTeamA"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="@string/free_throw"
+                android:onClick="addOneForTeamA"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context="com.theleafapps.pro.MainActivity">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/team_name"
+                android:layout_gravity="center_horizontal"
+                android:padding="8dp"
+                android:text="@string/team_b_text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/team_b_score"
+                android:padding="8dp"
+                android:textSize="80sp"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/zero" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="@string/_3_points"
+                android:onClick="addThreeForTeamA"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="@string/_2_points"
+                android:onClick="addTwoForTeamA"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="@string/free_throw"
+                android:onClick="addOneForTeamA"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/team_name"
-        android:layout_gravity="center_horizontal"
-        android:padding="8dp"
-        android:text="Team A" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/team_a_score"
-        android:padding="8dp"
-        android:layout_gravity="center_horizontal"
-        android:text="0" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text="+3 Points"
-        android:onClick="addThreeForTeamA"/>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text="+2 Points"
-        android:onClick="addTwoForTeamA"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text="Free Throw"
-        android:onClick="addOneForTeamA"/>
+        android:layout_marginTop="24sp"
+        android:text="@string/reset_button_text"
+        android:layout_gravity="center_horizontal"/>
 
 </LinearLayout>
