@@ -28,19 +28,19 @@
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:text="+3 Points"
-        android:onClick="display3"/>
+        android:onClick="addThreeForTeamA"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:text="+2 Points"
-        android:onClick="display2"/>
+        android:onClick="addTwoForTeamA"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:text="Free Throw"
-        android:onClick="display1ft"/>
+        android:onClick="addOneForTeamA"/>
 
 </LinearLayout>
