@@ -8,13 +8,15 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     int scoreTeamA = 0;
-    TextView scoreView;
+    int scoreTeamB = 0;
+    TextView scoreViewA,scoreViewB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        scoreView = (TextView) findViewById(R.id.team_a_score);
+        scoreViewA = (TextView) findViewById(R.id.team_a_score);
+        scoreViewB = (TextView) findViewById(R.id.team_b_score);
         displayForTeamA(0);
     }
 
@@ -22,7 +24,21 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given scoreTeamA for Team A.
      */
     public void displayForTeamA(int score) {
-        scoreView.setText(String.valueOf(score));
+        scoreViewA.setText(String.valueOf(score));
+    }
+
+    /**
+     * Displays the given scoreTeamA for Team B.
+     */
+    public void displayForTeamB(int score) {
+        scoreViewB.setText(String.valueOf(score));
+    }
+
+    public void resetScore(View view){
+        scoreViewA.setText(String.valueOf(0));
+        scoreViewB.setText(String.valueOf(0));
+        scoreTeamA  =   0;
+        scoreTeamB  =   0;
     }
 
     public void addThreeForTeamA(View view) {
@@ -38,5 +54,21 @@ public class MainActivity extends AppCompatActivity {
     public void addOneForTeamA(View view) {
         scoreTeamA += 1;
         displayForTeamA(scoreTeamA);
+    }
+
+
+    public void addThreeForTeamB(View view) {
+        scoreTeamB += 3;
+        displayForTeamB(scoreTeamB);
+    }
+
+    public void addTwoForTeamB(View view) {
+        scoreTeamB += 2;
+        displayForTeamB(scoreTeamB);
+    }
+
+    public void addOneForTeamB(View view) {
+        scoreTeamB += 1;
+        displayForTeamB(scoreTeamB);
     }
 }
